@@ -1,0 +1,191 @@
+<!-- 顶部导航栏 -->
+<view class="navbar">
+  <text class="logo">卫老师品质小饭桌</text>
+  <view class="cta-btn" bindtap="callPhone">📞 联系咨询</view>
+</view>
+
+<!-- 头部大图 -->
+<view class="hero">
+  <view class="hero-content">
+    <view class="hero-badge">🏠 品质托管</view>
+    <view class="hero-title">
+      <text>家的味道，\n</text>
+      <text class="accent">妈妈般的守护</text>
+    </view>
+    <text class="subtitle">专为西工大附中学生打造的品质小饭桌\n营养午餐 · 舒适午休 · 老师看护</text>
+    <view class="years-badge">⭐ 十余年口碑老店 · 值得信赖</view>
+    <view class="hero-buttons">
+      <view class="btn btn-primary" bindtap="callPhone">📞 免费试吃预约</view>
+      <view class="btn btn-outline" bindtap="scrollToPricing">💰 查看收费方案</view>
+    </view>
+  </view>
+</view>
+
+<!-- 关于我们 -->
+<view class="section" id="about">
+  <view class="section-label">ABOUT US</view>
+  <view class="section-title">关于我们</view>
+  <view class="about-text">
+    <text>我们在<text class="strong">西工大附中</text>附近小区经营小饭桌已有<text class="strong">十余年</text>，专为中学生提供午餐和午休托管服务。\n\n我们深知每一位家长对孩子的牵挂——饭菜是不是热乎的？中午有没有好好休息？老师是不是真在管？\n\n这些问题，我们用每一天的行动来回答。不是口号，是习惯。</text>
+  </view>
+  <view class="about-stats">
+    <view class="stat-item">
+      <view class="stat-number">10+</view>
+      <view class="stat-label">年经营经验</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-number">1000+</view>
+      <view class="stat-label">服务过的学生</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-number">90%</view>
+      <view class="stat-label">家长满意度</view>
+    </view>
+  </view>
+</view>
+
+<!-- 三大亮点 -->
+<view class="bg-alt">
+  <view class="section">
+    <view class="section-label">WHY CHOOSE US</view>
+    <view class="section-title">为什么选择我们</view>
+    <view class="section-desc">十几年的口碑不是偶然，是每一天的用心换来的</view>
+    <view class="highlights">
+      <view class="highlight-card">
+        <view class="highlight-icon">🍱</view>
+        <view class="highlight-title">饭菜丰富好吃</view>
+        <text class="highlight-desc">每周菜单不重样，五菜一汤+水果，家常口味孩子爱吃。食材每日采购，厨房明厨亮灶。</text>
+      </view>
+      <view class="highlight-card">
+        <view class="highlight-icon">😴</view>
+        <view class="highlight-title">老师监督午睡</view>
+        <text class="highlight-desc">管理老师全程看护，督促每个孩子安静午休。双职工家庭的救星——有人帮您管孩子午睡。</text>
+      </view>
+      <view class="highlight-card">
+        <view class="highlight-icon">🏡</view>
+        <view class="highlight-title">环境宽敞舒适</view>
+        <text class="highlight-desc">就餐区和午休区分开，每个孩子有固定床位。干净整洁，空调暖气齐全，像家一样舒服。</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 菜品展示轮播 -->
+<view class="section" id="menu">
+  <view class="section-label">OUR FOOD</view>
+  <view class="section-title">菜品展示</view>
+  <view class="section-desc">每一餐都用心准备，不凑合、不对付</view>
+  <swiper class="food-swiper" indicator-dots autoplay circular interval="2000" duration="500">
+    <swiper-item wx:for="{{foodImages}}" wx:key="index">
+      <image class="food-img" src="{{item}}" mode="aspectFill" lazy-load />
+    </swiper-item>
+  </swiper>
+  <view class="food-hint">← 左右滑动查看更多菜品 →</view>
+</view>
+
+<!-- 聚餐时光 -->
+<view class="section" id="gathering">
+  <view class="section-label">GATHERING</view>
+  <view class="section-title">聚餐时光</view>
+  <view class="section-desc">同学们一起吃、一起聊，每天中午都是一场小聚餐</view>
+  <view class="gallery">
+    <image class="gallery-img" src="https://xiaofanzhuo.vercel.app/小饭桌广告素材/环境/聚餐1.jpg" mode="aspectFill" lazy-load />
+    <image class="gallery-img" src="https://xiaofanzhuo.vercel.app/小饭桌广告素材/环境/聚餐2.jpg" mode="aspectFill" lazy-load />
+    <image class="gallery-img" src="https://xiaofanzhuo.vercel.app/小饭桌广告素材/环境/聚餐3.jpg" mode="aspectFill" lazy-load />
+  </view>
+</view>
+
+<!-- 价格方案 -->
+<view class="section" id="pricing">
+  <view class="section-label">PRICING</view>
+  <view class="section-title">收费方案</view>
+  <view class="section-desc">综合性价比高，不玩套路，明码标价</view>
+  <view class="pricing-cards">
+    <view class="price-card">
+      <view class="price-title">🎒 午托</view>
+      <view class="price-amount">1000<text class="price-unit"> 元/月</text></view>
+      <view class="price-list">
+        <text>✓ 营养午餐（五菜一汤）\n</text>
+        <text>✓ 固定床位午休\n</text>
+        <text>✓ 老师全程看护\n</text>
+        <text>✓ 时令水果</text>
+      </view>
+    </view>
+    <view class="price-card">
+      <view class="price-title">🍱 晚托</view>
+      <view class="price-amount">600<text class="price-unit"> 元/月</text></view>
+      <view class="price-list">
+        <text>✓ 营养晚餐（五菜一汤）\n</text>
+        <text>✓ 时令水果\n</text>
+        <text>✓ 晚间自习</text>
+      </view>
+    </view>
+    <view class="price-card">
+      <view class="price-title">🏠 全托</view>
+      <view class="price-amount">3000<text class="price-unit"> 元/月</text></view>
+      <view class="price-list">
+        <text>✓ 午餐 + 晚餐\n</text>
+        <text>✓ 固定床位午休\n</text>
+        <text>✓ 晚间自习辅导\n</text>
+        <text>✓ 老师全程看护\n</text>
+        <text>✓ 时令水果</text>
+      </view>
+    </view>
+  </view>
+  <view class="discount-tip">
+    🎉 <text class="orange-text">全年预订享 9 折</text>　｜　<text class="orange-text">半年预订享 95 折</text>
+  </view>
+</view>
+
+<!-- 联系方式 -->
+<view class="bg-alt">
+  <view class="section" id="contact">
+    <view class="section-label">CONTACT</view>
+    <view class="section-title">联系我们</view>
+    <view class="section-desc">欢迎家长带孩子来实地看看，试吃一餐再决定</view>
+    <view class="contact-grid">
+      <view class="contact-info">
+        <view class="contact-title">📋 联系方式</view>
+        <view class="contact-item" bindtap="callPhone">
+          <text class="contact-icon">📞</text>
+          <text>电话 / 微信：<text class="strong">{{phone}}</text></text>
+        </view>
+        <view class="contact-item" bindtap="openMap">
+          <text class="contact-icon">📍</text>
+          <text>地址：{{address}}</text>
+        </view>
+        <view class="contact-item">
+          <text class="contact-icon">🕐</text>
+          <text>服务时间：周一至周六 8:30 - 20:00</text>
+        </view>
+        <view class="contact-item">
+          <text class="contact-icon">💡</text>
+          <text>欢迎提前预约，带孩子来<text class="strong">免费试吃一餐</text></text>
+        </view>
+      </view>
+      <view class="qr-box">
+        <view class="qr-title">扫一扫加微信</view>
+        <image class="qr-img" src="https://xiaofanzhuo.vercel.app/小饭桌广告素材/二维码.jpg" mode="aspectFit" />
+        <text class="qr-tip">长按识别二维码\n或搜索微信号添加</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 页脚 -->
+<view class="footer">
+  © 2026 卫老师品质小饭桌 · 专业中学生托管服务 · 欢迎实地参观
+</view>
+
+<!-- 返回顶部按钮 -->
+<view class="back-to-top {{showBackTop ? 'visible' : ''}}" bindtap="scrollToTop">↑</view>
+
+<!-- 底部固定联系栏 -->
+<view class="bottom-bar">
+  <view class="bottom-btn bottom-btn-call" bindtap="callPhone">
+    <text>📞 打电话</text>
+  </view>
+  <view class="bottom-btn bottom-btn-wechat" bindtap="copyWechat">
+    <text>💬 加微信</text>
+  </view>
+</view>
