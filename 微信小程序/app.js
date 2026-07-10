@@ -1,6 +1,6 @@
 App({
-  onLaunch() {
-    // 小程序启动
+  onLaunch: function () {
+    console.log('[App] 启动成功')
   },
   globalData: {
     phone: '13402940381',

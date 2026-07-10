@@ -135,9 +135,9 @@
 }
 .strong { font-weight: 700; color: #2d2d2d; }
 .about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 50rpx;
   text-align: center;
 }
@@ -158,12 +158,12 @@
 .highlights {
   display: flex;
   flex-direction: column;
-  gap: 24rpx;
 }
 .highlight-card {
   background: white;
   border-radius: 24rpx;
   padding: 40rpx;
+  margin-bottom: 24rpx;
   box-shadow: 0 8rpx 32rpx rgba(0,0,0,0.06);
   text-align: center;
 }
@@ -204,26 +204,30 @@
 
 /* ========== 聚餐时光 ========== */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16rpx;
+  display: flex;
+  flex-wrap: wrap;
 }
 .gallery-img {
-  width: 100%;
+  width: calc((100% - 32rpx) / 3);
   height: 220rpx;
   border-radius: 16rpx;
+  margin-right: 16rpx;
+  margin-bottom: 16rpx;
+}
+.gallery-img:nth-child(3n) {
+  margin-right: 0;
 }
 
 /* ========== 价格方案 ========== */
 .pricing-cards {
   display: flex;
   flex-direction: column;
-  gap: 24rpx;
 }
 .price-card {
   background: white;
   border-radius: 24rpx;
   padding: 40rpx;
+  margin-bottom: 24rpx;
   box-shadow: 0 8rpx 32rpx rgba(0,0,0,0.06);
   text-align: center;
 }
@@ -255,12 +259,12 @@
 .contact-grid {
   display: flex;
   flex-direction: column;
-  gap: 30rpx;
 }
 .contact-info {
   background: white;
   border-radius: 24rpx;
   padding: 40rpx;
+  margin-bottom: 30rpx;
   box-shadow: 0 8rpx 32rpx rgba(0,0,0,0.06);
 }
 .contact-title {
@@ -331,13 +335,10 @@
   font-weight: 700;
   box-shadow: 0 6rpx 24rpx rgba(230,126,34,0.4);
   opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
   z-index: 999;
 }
 .back-to-top.visible {
   opacity: 1;
-  pointer-events: auto;
 }
 
 /* ========== 底部固定栏 ========== */
@@ -351,7 +352,6 @@
   border-top: 1rpx solid rgba(0,0,0,0.08);
   padding: 12rpx 40rpx;
   padding-bottom: calc(12rpx + env(safe-area-inset-bottom));
-  gap: 24rpx;
   z-index: 1000;
 }
 .bottom-btn {
@@ -361,6 +361,10 @@
   border-radius: 60rpx;
   font-size: 28rpx;
   font-weight: 600;
+  margin-right: 24rpx;
+}
+.bottom-btn:last-child {
+  margin-right: 0;
 }
 .bottom-btn-call {
   background: #e67e22;

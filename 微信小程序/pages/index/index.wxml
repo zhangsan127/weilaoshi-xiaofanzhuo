@@ -76,7 +76,7 @@
   <view class="section-title">菜品展示</view>
   <view class="section-desc">每一餐都用心准备，不凑合、不对付</view>
   <swiper class="food-swiper" indicator-dots autoplay circular interval="2000" duration="500">
-    <swiper-item wx:for="{{foodImages}}" wx:key="index">
+    <swiper-item wx:for="{{foodImages}}" wx:key="*this">
       <image class="food-img" src="{{item}}" mode="aspectFill" lazy-load />
     </swiper-item>
   </swiper>
@@ -89,9 +89,7 @@
   <view class="section-title">聚餐时光</view>
   <view class="section-desc">同学们一起吃、一起聊，每天中午都是一场小聚餐</view>
   <view class="gallery">
-    <image class="gallery-img" src="https://xiaofanzhuo.vercel.app/小饭桌广告素材/环境/聚餐1.jpg" mode="aspectFill" lazy-load />
-    <image class="gallery-img" src="https://xiaofanzhuo.vercel.app/小饭桌广告素材/环境/聚餐2.jpg" mode="aspectFill" lazy-load />
-    <image class="gallery-img" src="https://xiaofanzhuo.vercel.app/小饭桌广告素材/环境/聚餐3.jpg" mode="aspectFill" lazy-load />
+    <image class="gallery-img" wx:for="{{galleryImages}}" wx:key="*this" src="{{item}}" mode="aspectFill" lazy-load />
   </view>
 </view>
 
@@ -165,7 +163,7 @@
       </view>
       <view class="qr-box">
         <view class="qr-title">扫一扫加微信</view>
-        <image class="qr-img" src="https://xiaofanzhuo.vercel.app/小饭桌广告素材/二维码.jpg" mode="aspectFit" />
+        <image class="qr-img" src="{{qrImage}}" mode="aspectFit" />
         <text class="qr-tip">长按识别二维码\n或搜索微信号添加</text>
       </view>
     </view>

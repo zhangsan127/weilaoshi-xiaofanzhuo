@@ -1,17 +1,4 @@
-/* 全局样式变量 */
 page {
-  --orange: #e67e22;
-  --orange-light: #fce4cc;
-  --orange-dark: #c96b15;
-  --warm-bg: #fffaf5;
-  --warm-bg-alt: #fff5eb;
-  --text: #2d2d2d;
-  --text-light: #5a5a5a;
-  --text-lighter: #7a7a7a;
-  --white: #ffffff;
-  --shadow: 0 4rpx 20rpx rgba(0,0,0,0.08);
-  --radius: 16rpx;
-
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
   color: #2d2d2d;
   background: #fffaf5;
